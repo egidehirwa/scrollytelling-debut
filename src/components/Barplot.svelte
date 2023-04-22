@@ -16,7 +16,7 @@
     <h1>Bargraph of Bridge traffic</h1>
 <svg>
 {#each bridgeTraffic as bridge, i}
-    <g transform={`translate(300 ${i * 20 + 10})`}>
+    <g transform={`translate(550 ${i * 20 + 200})`}>
         <rect width={bridge.traffic / 1000} height="10" fill="red" />
         <text font-size="12" text-anchor="end" dominant-baseline="middle" x="-5" y="5">{bridge.name}</text>
         <text fill="#aaa" font-size="12" dominant-baseline="middle" y="5" x="{bridge.traffic / 1000 + 10}">{bridge.traffic.toLocaleString()}</text>
@@ -33,8 +33,9 @@
 
     svg {
         border: 1px solid #ddd;
-        width: 100%;
+        width: 80%;
         height: 500px;
+        margin: auto;
         
     }
 
@@ -43,8 +44,8 @@
         align-items: center;
         flex-direction: column;
         justify-content: center;
-        border: 1px solid red;
         color: black;
+        padding: 100px 0px;
         
     }
 </style>
