@@ -5,6 +5,8 @@
   import Scrolly from "./Scrolly.svelte";
   import Scatterplot from "./components/Scatterplot.svelte";
   import Barplot from "./components/Barplot.svelte";
+  import ChartContainer from "./components/ChartContainer.svelte";
+  import Scatter from "./components/Scatter.svelte";
 	
   let value;
   const steps = [
@@ -40,6 +42,10 @@
   <div>
     <Barplot />
   </div>
+</section>
+<section>
+  <ChartContainer />
+  <Scatter />
 </section>
 
 <style>
