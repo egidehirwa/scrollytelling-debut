@@ -16,7 +16,7 @@
     <h1>Bargraph of Bridge traffic</h1>
 <svg>
 {#each bridgeTraffic as bridge, i}
-    <g transform={`translate(550 ${i * 20 + 200})`}>
+    <g transform={`translate(400 ${i * 20 + 200})`}>
         <rect width={bridge.traffic / 1000} height="10" fill="red" />
         <text font-size="12" text-anchor="end" dominant-baseline="middle" x="-5" y="5">{bridge.name}</text>
         <text fill="#aaa" font-size="12" dominant-baseline="middle" y="5" x="{bridge.traffic / 1000 + 10}">{bridge.traffic.toLocaleString()}</text>
